@@ -36,8 +36,8 @@ func NewAccountClient(timeout int, baseURL string) *Account {
 	}
 }
 
-// Create creates a new account
-func (a *Account) Create(ctx context.Context, data *Data) (*Data, error) {
+// CreateAccount creates a new account
+func (a *Account) CreateAccount(ctx context.Context, data *Data) (*Data, error) {
 	body, err := data.ConvertToJSON()
 
 	if err != nil {
@@ -76,8 +76,8 @@ func (a *Account) Create(ctx context.Context, data *Data) (*Data, error) {
 	return data, nil
 }
 
-// FetchOneByAccountID gets an account by ID
-func (a *Account) FetchOneByAccountID(ctx context.Context, accountID string) (*Data, error) {
+// FetchAccountByID gets an account by ID
+func (a *Account) FetchAccountByID(ctx context.Context, accountID string) (*Data, error) {
 	var data *Data
 
 	response, err := a.client.Get(
@@ -114,8 +114,8 @@ func (a *Account) FetchOneByAccountID(ctx context.Context, accountID string) (*D
 	return data, nil
 }
 
-// DeleteOneByAccountID deletes an account by ID
-func (a *Account) DeleteOneByAccountID(ctx context.Context, accountID string, version int) error {
+// DeleteAccountByID deletes an account by ID
+func (a *Account) DeleteAccountByID(ctx context.Context, accountID string, version int64) error {
 	response, err := a.client.Delete(
 		ctx,
 		fmt.Sprintf("%s/v1/organisation/accounts/%s?version=%d", a.baseURL, accountID, version),

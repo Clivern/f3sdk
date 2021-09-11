@@ -1,8 +1,42 @@
 # Form3 Exercise
 
 
-## Usage
+## Installation
 
+To install `f3sdk` package, you need to install Go (version 1.16+ is required) and setup your Go project first.
+
+```zsh
+$ mkdir example
+$ cd example
+$ go mod init example.com
+```
+
+Then you can use the below Go command to install the latest version of `f3sdk` package.
+
+```zsh
+$ go get -u github.com/clivern/f3sdk
+```
+
+Or the following for a specific version `v0.1.0`
+
+```zsh
+go get -u github.com/clivern/f3sdk@v0.1.0
+```
+
+Import the package in your code.
+
+```zsh
+import "github.com/clivern/f3sdk"
+```
+
+## Quick start
+
+Here is an example showing how to fetch, delete and create accounts using the sdk.
+
+```golang
+
+
+```
 
 
 ## Testing
