@@ -29,7 +29,7 @@ Import the package in your code.
 import "github.com/clivern/f3sdk"
 ```
 
-**Please note that: the sdk is private so the above steps isn't applicable. You have to clone and define the local path in `go.mod`**
+*Please note that: the sdk is private so the above steps not applicable. You have to clone and define the local path in `go.mod`*
 
 
 ## Quick start
