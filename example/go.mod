@@ -1,6 +1,6 @@
 module example.com
 
-go 1.17
+go 1.19
 
 replace github.com/clivern/f3sdk v0.0.0 => ../
 
